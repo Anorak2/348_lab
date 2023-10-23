@@ -108,7 +108,6 @@ int main (){
     printArrays();
     sum();
     multiply();
-
     diff();
     return 0;
 }
