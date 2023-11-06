@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<center>
+<div style="margin-top:80px">
+<h4>login Screen</h4>
+<input type="text" id="input" name="input">
+<button onclick="potato()"> login</button>
+<p id="feedback"></p>
+</div>
+</center>
+</body>
+
+<script>
+var state = true;
+var pass1, pass2;
+function potato(){
+	console.log("test");
+	if(state){
+    	pass1 = document.getElementById("input").value;
+		if(pass1.length < 8){
+        	document.getElementById("feedback").innerHTML  = "shorter than 8 characters";
+        }
+        else{
+        	document.getElementById("input").value  = "";
+        	state = !state;
+        }
+	}
+    else {
+    	pass2 = document.getElementById("input").value;
+        if(pass1 === pass2){
+        	document.getElementById("feedback").innerHTML  = "passwords are matched!";
+            state = true;
+        }
+        else{
+        	document.getElementById("feedback").innerHTML  = "passwords dont match";
+        }
+    }
+	
+}
+</script>
+</html>
